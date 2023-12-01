@@ -10,7 +10,7 @@ const Tab = createMaterialTopTabNavigator();
 
 const GuideRoutes = ({today="1st dec", yesterday = '30 Nov', tommorow = '31 Nov',goBack}) => {
   let now = new Date();
-  console.log("hours",today);
+
   return (
     <>
       <View
@@ -23,7 +23,7 @@ const GuideRoutes = ({today="1st dec", yesterday = '30 Nov', tommorow = '31 Nov'
           flexDirection:"row",
           width:getScreenWidthPercentage(100)
         }}>
-        <TouchableOpacity onPress={()=>{goBack()}} >
+        <TouchableOpacity style={{zIndex:20}} onPress={()=>{goBack()}} >
           <LeftIcon /> 
         </TouchableOpacity>
         <Text style={{ textAlign:"center", marginLeft:-28 ,fontWeight:"600" ,color:"#000" , fontSize:24  , width:getScreenWidthPercentage(100)-48}} >Itinerary Form</Text>
@@ -82,8 +82,8 @@ const GuideRoutes = ({today="1st dec", yesterday = '30 Nov', tommorow = '31 Nov'
                       fontWeight: '400',
                       textAlign: 'center',
                     }}>
-                      {console.log(today)}
-                    {/* {today} */}
+               
+                    {today}
                   </Text>
                 </View>
               );

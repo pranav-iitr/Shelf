@@ -1,4 +1,4 @@
-import {View, Text} from 'react-native';
+
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
@@ -6,9 +6,10 @@ import Home from '../Screens/Home';
 import Wallet from '../Screens/Wallet';
 import Chart from '../Screens/Chart';
 import Guide from '../Screens/Guide/Guide';
-
-// import HomeIcon from "../icons/HomeIcon"
-import Icon from 'react-native-vector-icons/FontAwesome';
+import HomeIcon from '../icons/HomeIcon';
+import WalletIcon from '../icons/WalletIcon';
+import GuideIcon from '../icons/GuideIcon';
+import ChartIcon from '../icons/ChartIcon';
 
 const Stack = createBottomTabNavigator();
 
@@ -18,7 +19,7 @@ const MainRoutes = () => {
       {/* <NavigationContainer> */}
 
       <Stack.Navigator
-        initialRouteName="Guide"
+        initialRouteName="Home"
         screenOptions={{
           headerShown: false,
 
@@ -31,15 +32,27 @@ const MainRoutes = () => {
         <Stack.Screen
           options={{
             tabBarIcon: ({color, size}) => {
-              return <Icon name="rocket" size={30} color="#900" />;
+              return <HomeIcon fill={color} />;
             },
           }}
           name="Home"
           component={Home}
         />
-        <Stack.Screen name="Wallet" component={Wallet} />
-        <Stack.Screen name="Guide" component={Guide} />
-        <Stack.Screen name="Chart" component={Chart} />
+        <Stack.Screen name="Wallet" options={{
+            tabBarIcon: ({color, size}) => {
+              return <WalletIcon fill={color} />;
+            },
+          }} component={Wallet} />
+        <Stack.Screen name="Guide" options={{
+            tabBarIcon: ({color, size}) => {
+              return <GuideIcon fill={color} />;
+            },
+          }} component={Guide} />
+        <Stack.Screen name="Chart"  options={{
+            tabBarIcon: ({color, size}) => {
+              return <ChartIcon fill={color} />;
+            },
+          }} component={Chart} />
       </Stack.Navigator>
       {/* </NavigationContainer> */}
     </>

@@ -18,7 +18,7 @@ function getMonthAbbreviation(monthNumber:Int32) {
 
 
 const Guide = ({navigation}:any) => {
-  const [Today, setToday] = useState({})
+  const [Today, setToday] = useState("")
   const [Yesterday, setYesterday] = useState("")
   const [Tommorow, setTommorow] = useState("")
 
