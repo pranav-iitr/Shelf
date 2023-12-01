@@ -8,8 +8,9 @@ import LeftIcon from '../icons/LeftIcon';
 
 const Tab = createMaterialTopTabNavigator();
 
-const GuideRoutes = ({today="1st dec", yesterday = '30 Nov', tommorow = '31 Nov',goBack}) => {
+const GuideRoutes = ({today="", yesterday = '', tommorow = '',goBack}) => {
   let now = new Date();
+  console.log("date",now)
 
   return (
     <>

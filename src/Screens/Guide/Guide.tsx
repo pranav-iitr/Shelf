@@ -23,15 +23,17 @@ const Guide = ({navigation}:any) => {
   const [Tommorow, setTommorow] = useState("")
 
   useEffect(() => {
-    let now = new Date()
+    let Now = new Date()
     let past = new Date(Date.now() - 1 * 24 * 60 * 60 * 1000)
     let future = new Date(Date.now() + 1 * 24 * 60 * 60 * 1000)
-    
+    // console.log("date",now.getMonth(),now)
+    console.log("date",past.getMonth(),past)
+    console.log("date",future)
   
     
-    setToday(`${now.getUTCDate()} ${ getMonthAbbreviation(now.getMonth())}`)
-    setYesterday(`${past.getUTCDate()} ${ getMonthAbbreviation(past.getMonth())}`)
-    setTommorow(`${future.getUTCDate()} ${ getMonthAbbreviation(future.getMonth())}`)
+    setToday(`${Now.getDate()} ${ getMonthAbbreviation(Now.getMonth()+1)}`)
+    setYesterday(`${past.getDate()} ${ getMonthAbbreviation(past.getMonth()+1)}`)
+    setTommorow(`${future.getDate()} ${ getMonthAbbreviation(future.getMonth()+1)}`)
   }, [])
   
   

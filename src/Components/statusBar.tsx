@@ -31,7 +31,7 @@ const StatusBar = ({arr, x = 22}: any) => {
       ? 1 + parseInt(item.ts.split(':')[0])
       : parseInt(item.ts.split(':')[0]),
   );
-  console.log(getLengthOfStatusBar([0, 8, 16, 24], x))
+  
   return (
     <View
       style={{
@@ -74,7 +74,7 @@ const StatusBar = ({arr, x = 22}: any) => {
             justifyContent: 'space-between',
           }}>
           {tempArr.map((item, id) => {
-            console.log(tempArr);
+         
             return (
               <View style={{}}>
                 {item <= x ? (
