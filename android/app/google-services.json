@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "23482225600",
+    "project_id": "shelf-90723",
+    "storage_bucket": "shelf-90723.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:23482225600:android:ca233304d3cceef4506e25",
+        "android_client_info": {
+          "package_name": "com.shelf"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCj-I8tXp2soSElcL84wdMXCdhpBdQMJhQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
